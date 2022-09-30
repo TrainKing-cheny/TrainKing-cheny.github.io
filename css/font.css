@@ -1,0 +1,8 @@
+@font-face{
+    font-family: 'MaShanZheng';
+    font-display: swap;
+    src: url('../font/MaShanZheng-Regular.ttf') format("truetype");
+}
+body {
+    font-family: 'MaShanZheng';
+}
