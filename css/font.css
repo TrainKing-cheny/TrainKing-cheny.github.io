@@ -16,7 +16,7 @@ div#menus {
 }
 h1#site-title {
   font-family: 'MaShanZheng';
-  font-size: 3em !important;
+  font-size: 4em !important;
 }
 a.article-title,
 a.blog-slider__title,
@@ -27,7 +27,7 @@ h1.post-title {
 
 .iconfont {
   font-family: 'iconfont' !important;
-  font-size: 3em;
+  font-size: 4em;
   /* 可以定义图标大小 */
   font-style: normal;
   -webkit-font-smoothing: antialiased;
