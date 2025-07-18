@@ -1,0 +1,413 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Digital Signal Processor | 喜欢我火车王吗？</title><meta name="author" content="TrainKing"><meta name="copyright" content="TrainKing"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="看！是一名铁驭，我们有救了！！！ 参考陈后金老师中国大学MOOC上的PPT资料。 chapter 1 信号与系统回顾所有的信号变换最基本的原理都是信号的表示。 信号分析连续信号时域表示频域表示S域表示离散信号时域表示频域表示Z域表示系统分析连续系统时域表示频域表示S域表示离散系统时域表示频域表示Z域表示 chapter 2 信号分析离散信号分析基本信号基本信号：脉冲、阶跃、指数、虚指、正弦、矩形。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Digital Signal Processor">
+<meta property="og:url" content="http://example.com/2023/06/03/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/index.html">
+<meta property="og:site_name" content="喜欢我火车王吗？">
+<meta property="og:description" content="看！是一名铁驭，我们有救了！！！ 参考陈后金老师中国大学MOOC上的PPT资料。 chapter 1 信号与系统回顾所有的信号变换最基本的原理都是信号的表示。 信号分析连续信号时域表示频域表示S域表示离散信号时域表示频域表示Z域表示系统分析连续系统时域表示频域表示S域表示离散系统时域表示频域表示Z域表示 chapter 2 信号分析离散信号分析基本信号基本信号：脉冲、阶跃、指数、虚指、正弦、矩形。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2023/06/03/pC9QLw9.jpg">
+<meta property="article:published_time" content="2023-06-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-06-08T04:17:08.000Z">
+<meta property="article:author" content="TrainKing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2023/06/03/pC9QLw9.jpg"><link rel="shortcut icon" href="/img/avatar.jpg"><link rel="canonical" href="http://example.com/2023/06/03/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Digital Signal Processor',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-06-08 12:17:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/font.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页捏捏</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 这是分类捏</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 这是归档捏</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 看看图片捏</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 听听音乐捏</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s1.ax1x.com/2023/06/03/pC9QLw9.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">喜欢我火车王吗？</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页捏捏</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 这是分类捏</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 这是归档捏</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 看看图片捏</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 听听音乐捏</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Digital Signal Processor</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-02T16:00:00.000Z" title="发表于 2023-06-03 00:00:00">2023-06-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-08T04:17:08.000Z" title="更新于 2023-06-08 12:17:08">2023-06-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Digital Signal Processor"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><del>看！是一名铁驭，我们有救了！！！</del></p>
+<p>参考陈后金老师中国大学MOOC上的PPT资料。</p>
+<h1 id="chapter-1-信号与系统回顾"><a href="#chapter-1-信号与系统回顾" class="headerlink" title="chapter 1 信号与系统回顾"></a>chapter 1 信号与系统回顾</h1><p><strong><u>所有的信号变换最基本的原理都是信号的表示。</u></strong></p>
+<h2 id="信号分析"><a href="#信号分析" class="headerlink" title="信号分析"></a>信号分析</h2><h3 id="连续信号"><a href="#连续信号" class="headerlink" title="连续信号"></a>连续信号</h3><h4 id="时域表示"><a href="#时域表示" class="headerlink" title="时域表示"></a>时域表示</h4><h4 id="频域表示"><a href="#频域表示" class="headerlink" title="频域表示"></a>频域表示</h4><h4 id="S域表示"><a href="#S域表示" class="headerlink" title="S域表示"></a>S域表示</h4><h3 id="离散信号"><a href="#离散信号" class="headerlink" title="离散信号"></a>离散信号</h3><h4 id="时域表示-1"><a href="#时域表示-1" class="headerlink" title="时域表示"></a>时域表示</h4><h4 id="频域表示-1"><a href="#频域表示-1" class="headerlink" title="频域表示"></a>频域表示</h4><h4 id="Z域表示"><a href="#Z域表示" class="headerlink" title="Z域表示"></a>Z域表示</h4><h2 id="系统分析"><a href="#系统分析" class="headerlink" title="系统分析"></a>系统分析</h2><h3 id="连续系统"><a href="#连续系统" class="headerlink" title="连续系统"></a>连续系统</h3><h4 id="时域表示-2"><a href="#时域表示-2" class="headerlink" title="时域表示"></a>时域表示</h4><h4 id="频域表示-2"><a href="#频域表示-2" class="headerlink" title="频域表示"></a>频域表示</h4><h4 id="S域表示-1"><a href="#S域表示-1" class="headerlink" title="S域表示"></a>S域表示</h4><h3 id="离散系统"><a href="#离散系统" class="headerlink" title="离散系统"></a>离散系统</h3><h4 id="时域表示-3"><a href="#时域表示-3" class="headerlink" title="时域表示"></a>时域表示</h4><h4 id="频域表示-3"><a href="#频域表示-3" class="headerlink" title="频域表示"></a>频域表示</h4><h4 id="Z域表示-1"><a href="#Z域表示-1" class="headerlink" title="Z域表示"></a>Z域表示</h4><hr>
+<h1 id="chapter-2-信号分析"><a href="#chapter-2-信号分析" class="headerlink" title="chapter 2 信号分析"></a>chapter 2 信号分析</h1><h2 id="离散信号分析"><a href="#离散信号分析" class="headerlink" title="离散信号分析"></a>离散信号分析</h2><h3 id="基本信号"><a href="#基本信号" class="headerlink" title="基本信号"></a>基本信号</h3><p>基本信号：脉冲、阶跃、指数、<u><strong>虚指</strong></u>、<u><strong>正弦</strong></u>、矩形。</p>
+<hr>
+<p>通过基本信号和基本运算可以实现复杂信号的表示，同时也是信号频域与复频域分析的基本载体。（详情可参照$Fourier$变换）</p>
+<p>有关基本信号的相关表示不多做概述，</p>
+<p>注意好虚指数信号与正弦信号通过$Euler$公式建立起的关系即可，<strong>需要注意对正弦型信号是否为周期信号的判断</strong>。</p>
+<hr>
+<h3 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a>基本运算</h3><p>基本运算：翻转、位移、**<u>内插</u><strong>、</strong><u>抽取</u>**、<u><strong>卷积</strong></u>、相关</p>
+<hr>
+<h4 id="抽取"><a href="#抽取" class="headerlink" title="抽取"></a>抽取</h4><p>$$<br>x_{D}[k]&#x3D;x[Mk] \\<br>M为正整数<br>$$</p>
+<p>在原序列中每M个点（即每隔M-1个点）抽取一点（坐标会发生改变）。</p>
+<p>注意：0点不动。</p>
+<p><strong><u>相当于对离散信号进行压缩！！！</u></strong></p>
+<hr>
+<h4 id="内插"><a href="#内插" class="headerlink" title="内插"></a>内插</h4><p>$$<br>x_{L}[k]&#x3D;\left{\begin{matrix}<br> x[k&#x2F;L] &amp; k为L的整数倍  \\<br> 0 &amp; 其它<br>\end{matrix}\right.<br>$$</p>
+<p>在原序列中各点之间插入L-1个点。</p>
+<p>注意：0点不动。</p>
+<p><strong><u>相当于对离散信号进行扩展！！！</u></strong></p>
+<hr>
+<h3 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h3><p>详见信号与系统。</p>
+<hr>
+<h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h3><p>$$<br>互相关：R_{xy}[n]&#x3D;\sum_{k&#x3D;-\infty}^{\infty}x[k]y[k+n] \\<br>自相关：R_{x}[n]&#x3D;\sum_{k&#x3D;-\infty}^{\infty}x[k]x[k+n]<br>$$</p>
+<p>**<u>相关运算可以等价为卷积运算</u>**。<br>$$<br>R_{xy}[n]&#x3D;\sum_{k&#x3D;-\infty}^{\infty}x[k]y[k+n]&#x3D;x[-n]*y[n]<br>$$<br>互相关函数具有对称性：<br>$$<br>R_{xy}[n]&#x3D;R_{yx}[-n]<br>$$</p>
+<hr>
+<h2 id="离散系统分析"><a href="#离散系统分析" class="headerlink" title="离散系统分析"></a>离散系统分析</h2><h3 id="线性系统"><a href="#线性系统" class="headerlink" title="线性系统"></a>线性系统</h3><p>同时具有均匀特性与叠加特性的系统。<br>$$<br>T{ax_{1}[k]+bx_{2}[k]}&#x3D;aT{x_{1}[k]}+bT{x_{2}[k]}<br>$$</p>
+<hr>
+<h3 id="非时变系统"><a href="#非时变系统" class="headerlink" title="非时变系统"></a>非时变系统</h3><p>我习惯叫时不变系统。</p>
+<p>输入延时的时候输出相应地延时相同的单位。<br>$$<br>if \enspace x[k]→y[k],\enspace then\enspace x[k-n]→y[k-n]<br>$$</p>
+<hr>
+<h3 id="因果系统"><a href="#因果系统" class="headerlink" title="因果系统"></a>因果系统</h3><p>系统的输出相应不超前于系统的输入信号。</p>
+<hr>
+<h3 id="稳定系统"><a href="#稳定系统" class="headerlink" title="稳定系统"></a>稳定系统</h3><p>系统对任意的有界输入其输出也有界。</p>
+<hr>
+<h2 id="离散信号的频域分析"><a href="#离散信号的频域分析" class="headerlink" title="离散信号的频域分析"></a>离散信号的频域分析</h2><p>从时域上分析部分信号时有困难，故考虑从频域上分析信号。</p>
+<h3 id="离散周期信号的DFS表示"><a href="#离散周期信号的DFS表示" class="headerlink" title="离散周期信号的DFS表示"></a>离散周期信号的DFS表示</h3><p>周期为N的任意周期序列$\tilde{x}$可以用$N$个虚指数序列表示。<br>$$<br>\tilde{x}[k]&#x3D;\frac{1}{N}\tilde{X}[m]e^{j\Omega_{0}mk}  \\<br>\Omega_{0}&#x3D;\frac{2\pi}{N}<br>$$<br> 不同的序列对应的加权系数是唯一的。</p>
+<p>我们将这个加权序列称为这个离散周期信号的频谱。</p>
+<hr>
+<h4 id="IDFS"><a href="#IDFS" class="headerlink" title="IDFS"></a>IDFS</h4><p>$$<br>\tilde{x}[k]&#x3D;\frac{1}{N}\tilde{X}[m]e^{j\Omega_{0}mk}<br>$$</p>
+<hr>
+<h4 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h4><p>$$<br>\tilde{X}[m]&#x3D;\sum^{N-1}<em>{k&#x3D;0}\tilde{x}[k]e^{j\Omega</em>{0}mk}&#x3D;|\tilde{X}[m]|e^{j\varphi |m|}<br>$$</p>
+<p>其中$|\tilde{X}[m]|$为幅度频谱，$\varphi |m|$为相位频谱。</p>
+<hr>
+<h3 id="离散周期信号的DFS性质"><a href="#离散周期信号的DFS性质" class="headerlink" title="离散周期信号的DFS性质"></a>离散周期信号的DFS性质</h3><h4 id="线性特性"><a href="#线性特性" class="headerlink" title="线性特性"></a>线性特性</h4><p>不多赘述</p>
+<hr>
+<h4 id="位移特性"><a href="#位移特性" class="headerlink" title="位移特性"></a>位移特性</h4><p>只看一个周期内的即可（可以框一个框代表一个周期观察移出去的和移进来的）</p>
+<p><strong><u>时域的位移和频域的相移对应。</u></strong></p>
+<hr>
+<h4 id="对称特性"><a href="#对称特性" class="headerlink" title="对称特性"></a>对称特性</h4><p>$$<br>\tilde{x}^{<em>}[k]\longleftrightarrow  \tilde{X}^{</em>}[-m] \\<br>\tilde{x}^{<em>}[-k]\longleftrightarrow  \tilde{X}^{</em>}[m]<br>$$</p>
+<p>若x为实序列，则有<br>$$<br>\tilde{X}[m]&#x3D;\tilde{X}^{*}[-m]<br>$$<br><u><strong>幅度谱偶对称，相位谱奇对称。</strong></u></p>
+<p><u><strong>实部偶对称，虚部奇对称。</strong></u></p>
+<hr>
+<h4 id="周期卷积特性"><a href="#周期卷积特性" class="headerlink" title="周期卷积特性"></a>周期卷积特性</h4><p>时域周期卷积定理<br>$$<br>\tilde{x}<em>{1}[k]*\tilde{x}</em>{2}[k]&#x3D;\tilde{X}<em>{1}[m]·\tilde{X}</em>{2}[m]<br>$$<br>频域周期卷积定理<br>$$<br>\tilde{x}<em>{1}[k]·\tilde{x}</em>{2}[k]&#x3D;\frac{1}{N}\tilde{X}<em>{1}[m]*\tilde{X}</em>{2}[m]<br>$$<br>即：</p>
+<p><u><strong>时域卷积对应频域乘积，时域乘积对应周期卷积。</strong></u></p>
+<hr>
+<p>周期卷积定义：<br>$$<br>\tilde{x}<em>{1}[k]*\tilde{x}</em>{2}[k]&#x3D;\sum_{n&#x3D;0}^{N-1}\tilde{x}<em>{1}[n]\tilde{x}</em>{2}[k-n]<br>$$<br>周期卷积是两个等周期的周期序列的卷积运算。</p>
+<p>相关遇见你是了可以等价为卷积运算。</p>
+<hr>
+<h3 id="离散非周期信号的频域表示"><a href="#离散非周期信号的频域表示" class="headerlink" title="离散非周期信号的频域表示"></a>离散非周期信号的频域表示</h3><p>离散非周期序列表达为：<br>$$<br>x[k]&#x3D;\frac{1}{2\pi}\int_{&lt;2\pi&gt;}X(e^{j\Omega})·e^{j\Omega k}d\Omega<br>$$<br>其中$X(e^{j\Omega})$称为非周期信号的频谱。</p>
+<hr>
+<h4 id="IDTFT"><a href="#IDTFT" class="headerlink" title="IDTFT"></a>IDTFT</h4><p>$$<br>x[k]&#x3D;\frac{1}{2\pi}\int_{&lt;2\pi&gt;}X(e^{j\Omega})·e^{j\Omega k}d\Omega<br>$$</p>
+<hr>
+<h4 id="DTFT"><a href="#DTFT" class="headerlink" title="DTFT"></a>DTFT</h4><p>$$<br>X(e^{j\Omega})&#x3D;\sum_{k&#x3D;-\infty}^{\infty}e^{j\Omega k}<br>$$</p>
+<hr>
+<h4 id="频谱的特点"><a href="#频谱的特点" class="headerlink" title="频谱的特点"></a>频谱的特点</h4><p>1.连续。</p>
+<p>2.<u><strong>周期为2$\pi$。</strong></u></p>
+<hr>
+<h3 id="离散时间傅里叶变换的性质"><a href="#离散时间傅里叶变换的性质" class="headerlink" title="离散时间傅里叶变换的性质"></a>离散时间傅里叶变换的性质</h3><h4 id="线性特性-1"><a href="#线性特性-1" class="headerlink" title="线性特性"></a>线性特性</h4><p>略</p>
+<h4 id="对称特性-1"><a href="#对称特性-1" class="headerlink" title="对称特性"></a>对称特性</h4><p>和连续一样，略</p>
+<h4 id="位移特性-1"><a href="#位移特性-1" class="headerlink" title="位移特性"></a>位移特性</h4><p>时域的时移对应频域的相移</p>
+<p>时域的相移对应频域的频移</p>
+<h4 id="卷积特性"><a href="#卷积特性" class="headerlink" title="卷积特性"></a>卷积特性</h4><p>时域的卷积对应频域的乘积</p>
+<p>时域的乘积对应频域的卷积</p>
+<h4 id="Parseval定理"><a href="#Parseval定理" class="headerlink" title="Parseval定理"></a>Parseval定理</h4><p>时域能量等于频域能量</p>
+<p>公式略，懒了。</p>
+<h2 id="离散LTI系统的频域分析"><a href="#离散LTI系统的频域分析" class="headerlink" title="离散LTI系统的频域分析"></a>离散LTI系统的频域分析</h2><h4 id="非周期序列通过LTI系统的频率响应"><a href="#非周期序列通过LTI系统的频率响应" class="headerlink" title="非周期序列通过LTI系统的频率响应"></a>非周期序列通过LTI系统的频率响应</h4><h4 id="周期序列通过LTI系统的频率响应"><a href="#周期序列通过LTI系统的频率响应" class="headerlink" title="周期序列通过LTI系统的频率响应"></a>周期序列通过LTI系统的频率响应</h4><h2 id="理想数字滤波器"><a href="#理想数字滤波器" class="headerlink" title="理想数字滤波器"></a>理想数字滤波器</h2><p>滤波器也是一种系统</p>
+<h4 id="低通滤波器"><a href="#低通滤波器" class="headerlink" title="低通滤波器"></a>低通滤波器</h4><p>低通可以描述其他三种滤波器。</p>
+<h4 id="高通滤波器"><a href="#高通滤波器" class="headerlink" title="高通滤波器"></a>高通滤波器</h4><h4 id="带通滤波器"><a href="#带通滤波器" class="headerlink" title="带通滤波器"></a>带通滤波器</h4><p>可以看成两个低通滤波器之差。</p>
+<h4 id="带阻滤波器"><a href="#带阻滤波器" class="headerlink" title="带阻滤波器"></a>带阻滤波器</h4><h2 id="离线信号的复频域分析"><a href="#离线信号的复频域分析" class="headerlink" title="离线信号的复频域分析"></a>离线信号的复频域分析</h2><h4 id="双边Z变换"><a href="#双边Z变换" class="headerlink" title="双边Z变换"></a>双边Z变换</h4><p>单边Z变换只能描述因果系统，故引入双边Z变换</p>
+<p>注意收敛域</p>
+<p>有限长序列的双边Z变换</p>
+<p>右边序列的双边Z变换</p>
+<p>左边序列的双边Z变换</p>
+<p>双边序列的双边Z变换</p>
+<p>双边Z变换的性质请注意位移特性</p>
+<h2 id="全通数字滤波器"><a href="#全通数字滤波器" class="headerlink" title="全通数字滤波器"></a>全通数字滤波器</h2><p>相位响应单调递减</p>
+<p>幅度响应恒为1（1阶和m阶均恒为1）</p>
+<p><u><strong>m阶全通滤波器的零极点成对出现，且互为倒数且共轭</strong></u></p>
+<p>且m阶实系数全通系统可以分解为m个1阶全通系统的级联。</p>
+<p>m阶实系数全通滤波器的相位响应为m个1阶全通滤波器的相位响应之和，非正且递减。</p>
+<h2 id="最小相位系统"><a href="#最小相位系统" class="headerlink" title="最小相位系统"></a>最小相位系统</h2><p>系统函数的零点和极点都在z平面单位圆内的因果系统都叫最小相位系统。</p>
+<p>记为$H_{min}(Z)$</p>
+<p>特性：在具有相同扶贫特性的同阶系统中，最小相位系统具有最大的相位，最小的延时。</p>
+<p>实系数的因果稳定系统$H(Z)$都可以表示为<br>$$<br>H(Z)&#x3D;H_{min}(z)A_{m}(z)<br>$$</p>
+<h2 id="信号的时域抽样"><a href="#信号的时域抽样" class="headerlink" title="信号的时域抽样"></a>信号的时域抽样</h2><p>针对连续信号进行离散化处理。</p>
+<p>信号的抽样与信号的重建。</p>
+<p><img src="C:\Users\刘辰宇\AppData\Roaming\Typora\typora-user-images\image-20230607235711177.png" alt="image-20230607235711177"></p>
+<h3 id="时域抽样定理"><a href="#时域抽样定理" class="headerlink" title="时域抽样定理"></a>时域抽样定理</h3><p>如果$x[k]$是$x(t)$的等间隔抽样，则$x[k]$的频谱是$x(t)$的p频谱的周期化。</p>
+<p><u><strong>本质：时域的离散化导致频域的周期化。</strong></u></p>
+<h1 id="chapter-2-习题"><a href="#chapter-2-习题" class="headerlink" title="chapter 2 习题"></a>chapter 2 习题</h1><h1 id="chapter-3-离散傅里叶变换"><a href="#chapter-3-离散傅里叶变换" class="headerlink" title="chapter 3 离散傅里叶变换"></a>chapter 3 离散傅里叶变换</h1><h2 id="有限长序列傅里叶分析"><a href="#有限长序列傅里叶分析" class="headerlink" title="有限长序列傅里叶分析"></a>有限长序列傅里叶分析</h2><p>只能求离散周期信号的频谱，想办法建立连续非周期信号、连续周期信号、离散非周期信号与离散周期信号的关系。</p>
+<p><u><strong>时域周期化对应频域离散化。</strong></u></p>
+<p>DFT和IDFT实际上就是DFS在周期上的取值。<br>$$<br>W_{N}^{mk}&#x3D;e^{j\frac{2\pi}{N}mk}<br>$$</p>
+<h2 id="离散傅里叶变换性质"><a href="#离散傅里叶变换性质" class="headerlink" title="离散傅里叶变换性质"></a>离散傅里叶变换性质</h2><h3 id="线性特性-2"><a href="#线性特性-2" class="headerlink" title="线性特性"></a>线性特性</h3><h3 id="循环位移特性"><a href="#循环位移特性" class="headerlink" title="循环位移特性"></a>循环位移特性</h3><h3 id="对称特性-2"><a href="#对称特性-2" class="headerlink" title="对称特性"></a>对称特性</h3><h3 id="循环卷积定理"><a href="#循环卷积定理" class="headerlink" title="循环卷积定理"></a>循环卷积定理</h3><p>注意循环卷积和线性卷积之间的关系.</p>
+<h2 id="DFT计算线性卷积"><a href="#DFT计算线性卷积" class="headerlink" title="DFT计算线性卷积"></a>DFT计算线性卷积</h2><p>用FFT计算</p>
+<h2 id="DFT分析信号频谱"><a href="#DFT分析信号频谱" class="headerlink" title="DFT分析信号频谱"></a>DFT分析信号频谱</h2><p>混叠现象</p>
+<p>泄露现象</p>
+<h1 id="chapter-3-习题"><a href="#chapter-3-习题" class="headerlink" title="chapter 3 习题"></a>chapter 3 习题</h1><h1 id="chapter-4-快速傅里叶变换FFT"><a href="#chapter-4-快速傅里叶变换FFT" class="headerlink" title="chapter 4 快速傅里叶变换FFT"></a>chapter 4 快速傅里叶变换FFT</h1><p>略</p>
+<h1 id="chapter-4-习题"><a href="#chapter-4-习题" class="headerlink" title="chapter 4 习题"></a>chapter 4 习题</h1><h1 id="chapter-5-IIR数字滤波器的设计"><a href="#chapter-5-IIR数字滤波器的设计" class="headerlink" title="chapter 5 IIR数字滤波器的设计"></a>chapter 5 IIR数字滤波器的设计</h1><h2 id="模拟滤波器的技术指标要求"><a href="#模拟滤波器的技术指标要求" class="headerlink" title="模拟滤波器的技术指标要求"></a>模拟滤波器的技术指标要求</h2><p>通带截止频率</p>
+<p>阻带截止频率</p>
+<p>通带波动</p>
+<p>阻带波动</p>
+<p>其中把波动转换成衰减的dB值，即最大衰减和最小衰减</p>
+<p>衰减函数和增益函数</p>
+<h2 id="Butterworth型"><a href="#Butterworth型" class="headerlink" title="Butterworth型"></a>Butterworth型</h2><p>设计步骤：</p>
+<p>①确定你模拟滤波器的阶数N</p>
+<p>②确定模拟滤波器的3dB截频</p>
+<p>③计算模拟滤波器的系统函数极点</p>
+<p>④得到系统函数</p>
+<h2 id="ChebyshevⅠ型"><a href="#ChebyshevⅠ型" class="headerlink" title="ChebyshevⅠ型"></a>ChebyshevⅠ型</h2><p>设计步骤：</p>
+<p>①由通带截频$\omega_{p}$确定$\omega_{c}$</p>
+<p>②由通带衰减$A_{p}$确定$\varepsilon $</p>
+<p>③有通带阻带指标确定$N$</p>
+<p>④求极点</p>
+<p>⑤由极点确定系统函数。</p>
+<h2 id="Chebyshev-Ⅱ型"><a href="#Chebyshev-Ⅱ型" class="headerlink" title="Chebyshev Ⅱ型"></a>Chebyshev Ⅱ型</h2><p>设计步骤：</p>
+<p>①由阻带截频$\omega_{s}$确定$\omega_{c}$</p>
+<p>②由阻带衰减$A_{s}$确定$\varepsilon $</p>
+<p>③有通带阻带指标确定$N$</p>
+<p>④求极点</p>
+<p>⑤由极点确定系统函数。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>BW最容易实现</p>
+<p>椭圆不易实现</p>
+<h2 id="低通设计高通、带通、带阻"><a href="#低通设计高通、带通、带阻" class="headerlink" title="低通设计高通、带通、带阻"></a>低通设计高通、带通、带阻</h2><p><img src="C:\Users\刘辰宇\AppData\Roaming\Typora\typora-user-images\image-20230608112317168.png" alt="image-20230608112317168"></p>
+<h2 id="模拟高通滤波器"><a href="#模拟高通滤波器" class="headerlink" title="模拟高通滤波器"></a>模拟高通滤波器</h2><h2 id="模拟带通滤波器"><a href="#模拟带通滤波器" class="headerlink" title="模拟带通滤波器"></a>模拟带通滤波器</h2><h2 id="模拟带阻滤波器"><a href="#模拟带阻滤波器" class="headerlink" title="模拟带阻滤波器"></a>模拟带阻滤波器</h2><hr>
+<h2 id="数字滤波器的设计"><a href="#数字滤波器的设计" class="headerlink" title="数字滤波器的设计"></a>数字滤波器的设计</h2><p>将模拟滤波器转换为数字滤波器，此处介绍方法</p>
+<h2 id="脉冲响应不变法"><a href="#脉冲响应不变法" class="headerlink" title="脉冲响应不变法"></a>脉冲响应不变法</h2><p><u><strong>只能设计低通和带通！！！</strong></u></p>
+<p><u><strong>频谱混叠不可避免</strong></u></p>
+<p>设计步骤：</p>
+<p>1.转换频率指标</p>
+<p>2.设计模拟滤波器系统函数</p>
+<p>3.系统函数转换</p>
+<h2 id="双线性变换法"><a href="#双线性变换法" class="headerlink" title="双线性变换法"></a>双线性变换法</h2><p>设计步骤：</p>
+<p>1.转换频率指标</p>
+<p>2.设计模拟滤波器系统函数</p>
+<p>3.系统函数转换</p>
+<h1 id="chapter-5-习题"><a href="#chapter-5-习题" class="headerlink" title="chapter 5 习题"></a>chapter 5 习题</h1><h1 id="chapter-6-FIR数字滤波器的设计"><a href="#chapter-6-FIR数字滤波器的设计" class="headerlink" title="chapter 6 FIR数字滤波器的设计"></a>chapter 6 FIR数字滤波器的设计</h1><h2 id="线性相位系统的充要条件"><a href="#线性相位系统的充要条件" class="headerlink" title="线性相位系统的充要条件"></a>线性相位系统的充要条件</h2><p>严格线性相位系统的相位函数满足</p>
+<p>广义线性相位系统值相位满足特定形式</p>
+<p>常用广义线性相位</p>
+<h2 id="线性相位系统的时域特性"><a href="#线性相位系统的时域特性" class="headerlink" title="线性相位系统的时域特性"></a>线性相位系统的时域特性</h2><p>Ⅰ型：偶对称，M偶数</p>
+<p>Ⅱ型：偶对称，M奇数</p>
+<p>Ⅲ型：奇对称，M偶数</p>
+<p>Ⅳ型：奇对称，M奇数</p>
+<h2 id="线性相位系统的频域特性"><a href="#线性相位系统的频域特性" class="headerlink" title="线性相位系统的频域特性"></a>线性相位系统的频域特性</h2><h3 id="Ⅰ型-h-k-x3D-h-M-k-M为偶数-："><a href="#Ⅰ型-h-k-x3D-h-M-k-M为偶数-：" class="headerlink" title="Ⅰ型$(h[k]&#x3D;h[M-k]),M为偶数$："></a>Ⅰ型$(h[k]&#x3D;h[M-k]),M为偶数$：</h3><p>$H(e^{j\Omega})&#x3D;e^{-j0.5M\Omega}A(\Omega)$</p>
+<p>设计低通、高通、带通、带阻</p>
+<h3 id="Ⅱ型-h-k-x3D-h-M-k-M为奇数"><a href="#Ⅱ型-h-k-x3D-h-M-k-M为奇数" class="headerlink" title="Ⅱ型$(h[k]&#x3D;h[M-k]),M为奇数$"></a>Ⅱ型$(h[k]&#x3D;h[M-k]),M为奇数$</h3><p>$H(e^{j\Omega})&#x3D;e^{-j0.5M\Omega}A(\Omega)$</p>
+<p>不能设计高通、带阻</p>
+<h3 id="Ⅲ型-h-k-x3D-h-M-k-M为偶数-："><a href="#Ⅲ型-h-k-x3D-h-M-k-M为偶数-：" class="headerlink" title="Ⅲ型$(h[k]&#x3D;-h[M-k]),M为偶数$："></a>Ⅲ型$(h[k]&#x3D;-h[M-k]),M为偶数$：</h3><p>$H(e^{j\Omega})&#x3D;e^{-(j0.5M\Omega-0.5\pi)}A(\Omega)$</p>
+<p>不能设计低通、高通、带阻</p>
+<h3 id="Ⅳ型-h-k-x3D-h-M-k-M为奇数-："><a href="#Ⅳ型-h-k-x3D-h-M-k-M为奇数-：" class="headerlink" title="Ⅳ型$(h[k]&#x3D;-h[M-k]),M为奇数$："></a>Ⅳ型$(h[k]&#x3D;-h[M-k]),M为奇数$：</h3><p>$H(e^{j\Omega})&#x3D;e^{-(j0.5M\Omega-0.5\pi)}A(\Omega)$</p>
+<p>不能设计低通</p>
+<p>总结如下：</p>
+<p><img src="C:\Users\刘辰宇\AppData\Roaming\Typora\typora-user-images\image-20230608114950460.png" alt="image-20230608114950460"></p>
+<h2 id="线性相位系统的零点分布"><a href="#线性相位系统的零点分布" class="headerlink" title="线性相位系统的零点分布"></a>线性相位系统的零点分布</h2><p>零点以共轭成对出现</p>
+<p><img src="C:\Users\刘辰宇\AppData\Roaming\Typora\typora-user-images\image-20230608115806325.png" alt="image-20230608115806325"></p>
+<h2 id="窗函数法"><a href="#窗函数法" class="headerlink" title="窗函数法"></a>窗函数法</h2><p>1.确定类型（Ⅰ、Ⅱ、Ⅲ、Ⅳ）和幅度函数</p>
+<p>2.由类型确定相位</p>
+<p>3.通过IDTFT求解$h_{d}[k]$</p>
+<p>4.加窗截短</p>
+<h3 id="窗函数的选择"><a href="#窗函数的选择" class="headerlink" title="窗函数的选择"></a>窗函数的选择</h3><p>矩形窗</p>
+<p>加权窗</p>
+<p>可调窗</p>
+<h2 id="频率取样法"><a href="#频率取样法" class="headerlink" title="频率取样法"></a>频率取样法</h2><h1 id="chapter-6-习题"><a href="#chapter-6-习题" class="headerlink" title="chapter 6 习题"></a>chapter 6 习题</h1><h1 id="chapter-7-数字滤波器的结构"><a href="#chapter-7-数字滤波器的结构" class="headerlink" title="chapter 7 数字滤波器的结构"></a>chapter 7 数字滤波器的结构</h1><h2 id="IIR数字滤波器的直接型结构"><a href="#IIR数字滤波器的直接型结构" class="headerlink" title="IIR数字滤波器的直接型结构"></a>IIR数字滤波器的直接型结构</h2><p>类似于信号与系统中的结构框图</p>
+<p>直接Ⅰ型结构</p>
+<p>直接Ⅱ型结构</p>
+<p>转置直接Ⅱ型结构</p>
+<p><u><strong>三阶以上的IIR一般不用直接型结构。</strong></u></p>
+<h2 id="IIR数字滤波器的级联型结构"><a href="#IIR数字滤波器的级联型结构" class="headerlink" title="IIR数字滤波器的级联型结构"></a>IIR数字滤波器的级联型结构</h2><h2 id="IIR数字滤波器的并联型结构"><a href="#IIR数字滤波器的并联型结构" class="headerlink" title="IIR数字滤波器的并联型结构"></a>IIR数字滤波器的并联型结构</h2><h2 id="FIR数字滤波器的直接型结构"><a href="#FIR数字滤波器的直接型结构" class="headerlink" title="FIR数字滤波器的直接型结构"></a>FIR数字滤波器的直接型结构</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">TrainKing</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/06/03/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/">http://example.com/2023/06/03/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">喜欢我火车王吗？</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2023/06/03/pC9QLw9.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/10/28/test/"><img class="prev-cover" src="https://s1.ax1x.com/2023/05/23/p9TmVPS.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">有关文章封面更换的记录（图片上传至云图床）</div></div></a></div><div class="next-post pull-right"><a href="/2023/03/28/%E4%B8%93%E4%B8%9A%E5%86%99%E4%BD%9C/"><img class="next-cover" src="https://s1.ax1x.com/2023/05/23/p9Ti2WR.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">有关红外探测材料碲镉汞以及红外焦平面的调研以及发展历程的研究</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">TrainKing</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><script src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople1.js"></script><script src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/zdog.dist.js"></script><script id="rendered-js" src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople.js"></script><style>.card-widget.card-announcement {
+margin: 0;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+canvas {
+display: block;
+margin: 0 auto;
+cursor: move;
+}</style><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-1-%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%9B%9E%E9%A1%BE"><span class="toc-number">1.</span> <span class="toc-text">chapter 1 信号与系统回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90"><span class="toc-number">1.1.</span> <span class="toc-text">信号分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7"><span class="toc-number">1.1.1.</span> <span class="toc-text">连续信号</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E5%9F%9F%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">时域表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%91%E5%9F%9F%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">频域表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#S%E5%9F%9F%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">S域表示</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E4%BF%A1%E5%8F%B7"><span class="toc-number">1.1.2.</span> <span class="toc-text">离散信号</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E5%9F%9F%E8%A1%A8%E7%A4%BA-1"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">时域表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%91%E5%9F%9F%E8%A1%A8%E7%A4%BA-1"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">频域表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Z%E5%9F%9F%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">Z域表示</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90"><span class="toc-number">1.2.</span> <span class="toc-text">系统分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.2.1.</span> <span class="toc-text">连续系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E5%9F%9F%E8%A1%A8%E7%A4%BA-2"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">时域表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%91%E5%9F%9F%E8%A1%A8%E7%A4%BA-2"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">频域表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#S%E5%9F%9F%E8%A1%A8%E7%A4%BA-1"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">S域表示</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.2.2.</span> <span class="toc-text">离散系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E5%9F%9F%E8%A1%A8%E7%A4%BA-3"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">时域表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%91%E5%9F%9F%E8%A1%A8%E7%A4%BA-3"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">频域表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Z%E5%9F%9F%E8%A1%A8%E7%A4%BA-1"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">Z域表示</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-2-%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">chapter 2 信号分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90"><span class="toc-number">2.1.</span> <span class="toc-text">离散信号分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E5%8F%B7"><span class="toc-number">2.1.1.</span> <span class="toc-text">基本信号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97"><span class="toc-number">2.1.2.</span> <span class="toc-text">基本运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%BD%E5%8F%96"><span class="toc-number">2.1.2.1.</span> <span class="toc-text">抽取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E6%8F%92"><span class="toc-number">2.1.2.2.</span> <span class="toc-text">内插</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%B7%E7%A7%AF"><span class="toc-number">2.1.3.</span> <span class="toc-text">卷积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3"><span class="toc-number">2.1.4.</span> <span class="toc-text">相关</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90"><span class="toc-number">2.2.</span> <span class="toc-text">离散系统分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.2.1.</span> <span class="toc-text">线性系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E6%97%B6%E5%8F%98%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.2.2.</span> <span class="toc-text">非时变系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%A0%E6%9E%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.2.3.</span> <span class="toc-text">因果系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%B3%E5%AE%9A%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.2.4.</span> <span class="toc-text">稳定系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E5%9F%9F%E5%88%86%E6%9E%90"><span class="toc-number">2.3.</span> <span class="toc-text">离散信号的频域分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84DFS%E8%A1%A8%E7%A4%BA"><span class="toc-number">2.3.1.</span> <span class="toc-text">离散周期信号的DFS表示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IDFS"><span class="toc-number">2.3.1.1.</span> <span class="toc-text">IDFS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DFS"><span class="toc-number">2.3.1.2.</span> <span class="toc-text">DFS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84DFS%E6%80%A7%E8%B4%A8"><span class="toc-number">2.3.2.</span> <span class="toc-text">离散周期信号的DFS性质</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%89%B9%E6%80%A7"><span class="toc-number">2.3.2.1.</span> <span class="toc-text">线性特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8D%E7%A7%BB%E7%89%B9%E6%80%A7"><span class="toc-number">2.3.2.2.</span> <span class="toc-text">位移特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E7%89%B9%E6%80%A7"><span class="toc-number">2.3.2.3.</span> <span class="toc-text">对称特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%A8%E6%9C%9F%E5%8D%B7%E7%A7%AF%E7%89%B9%E6%80%A7"><span class="toc-number">2.3.2.4.</span> <span class="toc-text">周期卷积特性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E9%9D%9E%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E5%9F%9F%E8%A1%A8%E7%A4%BA"><span class="toc-number">2.3.3.</span> <span class="toc-text">离散非周期信号的频域表示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IDTFT"><span class="toc-number">2.3.3.1.</span> <span class="toc-text">IDTFT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DTFT"><span class="toc-number">2.3.3.2.</span> <span class="toc-text">DTFT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%91%E8%B0%B1%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">2.3.3.3.</span> <span class="toc-text">频谱的特点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E6%97%B6%E9%97%B4%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">2.3.4.</span> <span class="toc-text">离散时间傅里叶变换的性质</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%89%B9%E6%80%A7-1"><span class="toc-number">2.3.4.1.</span> <span class="toc-text">线性特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E7%89%B9%E6%80%A7-1"><span class="toc-number">2.3.4.2.</span> <span class="toc-text">对称特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8D%E7%A7%BB%E7%89%B9%E6%80%A7-1"><span class="toc-number">2.3.4.3.</span> <span class="toc-text">位移特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%B7%E7%A7%AF%E7%89%B9%E6%80%A7"><span class="toc-number">2.3.4.4.</span> <span class="toc-text">卷积特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Parseval%E5%AE%9A%E7%90%86"><span class="toc-number">2.3.4.5.</span> <span class="toc-text">Parseval定理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3LTI%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%A2%91%E5%9F%9F%E5%88%86%E6%9E%90"><span class="toc-number">2.4.</span> <span class="toc-text">离散LTI系统的频域分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%9E%E5%91%A8%E6%9C%9F%E5%BA%8F%E5%88%97%E9%80%9A%E8%BF%87LTI%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94"><span class="toc-number">2.4.0.1.</span> <span class="toc-text">非周期序列通过LTI系统的频率响应</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%A8%E6%9C%9F%E5%BA%8F%E5%88%97%E9%80%9A%E8%BF%87LTI%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%A2%91%E7%8E%87%E5%93%8D%E5%BA%94"><span class="toc-number">2.4.0.2.</span> <span class="toc-text">周期序列通过LTI系统的频率响应</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%86%E6%83%B3%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="toc-number">2.5.</span> <span class="toc-text">理想数字滤波器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%8E%E9%80%9A%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="toc-number">2.5.0.1.</span> <span class="toc-text">低通滤波器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AB%98%E9%80%9A%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="toc-number">2.5.0.2.</span> <span class="toc-text">高通滤波器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E9%80%9A%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="toc-number">2.5.0.3.</span> <span class="toc-text">带通滤波器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E9%98%BB%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="toc-number">2.5.0.4.</span> <span class="toc-text">带阻滤波器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%BB%E7%BA%BF%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%A4%8D%E9%A2%91%E5%9F%9F%E5%88%86%E6%9E%90"><span class="toc-number">2.6.</span> <span class="toc-text">离线信号的复频域分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8C%E8%BE%B9Z%E5%8F%98%E6%8D%A2"><span class="toc-number">2.6.0.1.</span> <span class="toc-text">双边Z变换</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E9%80%9A%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="toc-number">2.7.</span> <span class="toc-text">全通数字滤波器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E7%9B%B8%E4%BD%8D%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.8.</span> <span class="toc-text">最小相位系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E6%8A%BD%E6%A0%B7"><span class="toc-number">2.9.</span> <span class="toc-text">信号的时域抽样</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E5%9F%9F%E6%8A%BD%E6%A0%B7%E5%AE%9A%E7%90%86"><span class="toc-number">2.9.1.</span> <span class="toc-text">时域抽样定理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-2-%E4%B9%A0%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">chapter 2 习题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-3-%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-number">4.</span> <span class="toc-text">chapter 3 离散傅里叶变换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E9%99%90%E9%95%BF%E5%BA%8F%E5%88%97%E5%82%85%E9%87%8C%E5%8F%B6%E5%88%86%E6%9E%90"><span class="toc-number">4.1.</span> <span class="toc-text">有限长序列傅里叶分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E6%80%A7%E8%B4%A8"><span class="toc-number">4.2.</span> <span class="toc-text">离散傅里叶变换性质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%89%B9%E6%80%A7-2"><span class="toc-number">4.2.1.</span> <span class="toc-text">线性特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E4%BD%8D%E7%A7%BB%E7%89%B9%E6%80%A7"><span class="toc-number">4.2.2.</span> <span class="toc-text">循环位移特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E7%89%B9%E6%80%A7-2"><span class="toc-number">4.2.3.</span> <span class="toc-text">对称特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E5%8D%B7%E7%A7%AF%E5%AE%9A%E7%90%86"><span class="toc-number">4.2.4.</span> <span class="toc-text">循环卷积定理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DFT%E8%AE%A1%E7%AE%97%E7%BA%BF%E6%80%A7%E5%8D%B7%E7%A7%AF"><span class="toc-number">4.3.</span> <span class="toc-text">DFT计算线性卷积</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DFT%E5%88%86%E6%9E%90%E4%BF%A1%E5%8F%B7%E9%A2%91%E8%B0%B1"><span class="toc-number">4.4.</span> <span class="toc-text">DFT分析信号频谱</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-3-%E4%B9%A0%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">chapter 3 习题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-4-%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2FFT"><span class="toc-number">6.</span> <span class="toc-text">chapter 4 快速傅里叶变换FFT</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-4-%E4%B9%A0%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">chapter 4 习题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-5-IIR%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">8.</span> <span class="toc-text">chapter 5 IIR数字滤波器的设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E6%8A%80%E6%9C%AF%E6%8C%87%E6%A0%87%E8%A6%81%E6%B1%82"><span class="toc-number">8.1.</span> <span class="toc-text">模拟滤波器的技术指标要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Butterworth%E5%9E%8B"><span class="toc-number">8.2.</span> <span class="toc-text">Butterworth型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chebyshev%E2%85%A0%E5%9E%8B"><span class="toc-number">8.3.</span> <span class="toc-text">ChebyshevⅠ型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chebyshev-%E2%85%A1%E5%9E%8B"><span class="toc-number">8.4.</span> <span class="toc-text">Chebyshev Ⅱ型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">8.5.</span> <span class="toc-text">结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8E%E9%80%9A%E8%AE%BE%E8%AE%A1%E9%AB%98%E9%80%9A%E3%80%81%E5%B8%A6%E9%80%9A%E3%80%81%E5%B8%A6%E9%98%BB"><span class="toc-number">8.6.</span> <span class="toc-text">低通设计高通、带通、带阻</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E9%AB%98%E9%80%9A%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="toc-number">8.7.</span> <span class="toc-text">模拟高通滤波器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E5%B8%A6%E9%80%9A%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="toc-number">8.8.</span> <span class="toc-text">模拟带通滤波器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E5%B8%A6%E9%98%BB%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="toc-number">8.9.</span> <span class="toc-text">模拟带阻滤波器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">8.10.</span> <span class="toc-text">数字滤波器的设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%89%E5%86%B2%E5%93%8D%E5%BA%94%E4%B8%8D%E5%8F%98%E6%B3%95"><span class="toc-number">8.11.</span> <span class="toc-text">脉冲响应不变法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8C%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E6%B3%95"><span class="toc-number">8.12.</span> <span class="toc-text">双线性变换法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-5-%E4%B9%A0%E9%A2%98"><span class="toc-number">9.</span> <span class="toc-text">chapter 5 习题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-6-FIR%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">10.</span> <span class="toc-text">chapter 6 FIR数字滤波器的设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%9B%B8%E4%BD%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%85%85%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="toc-number">10.1.</span> <span class="toc-text">线性相位系统的充要条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%9B%B8%E4%BD%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%97%B6%E5%9F%9F%E7%89%B9%E6%80%A7"><span class="toc-number">10.2.</span> <span class="toc-text">线性相位系统的时域特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%9B%B8%E4%BD%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%A2%91%E5%9F%9F%E7%89%B9%E6%80%A7"><span class="toc-number">10.3.</span> <span class="toc-text">线性相位系统的频域特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%85%A0%E5%9E%8B-h-k-x3D-h-M-k-M%E4%B8%BA%E5%81%B6%E6%95%B0-%EF%BC%9A"><span class="toc-number">10.3.1.</span> <span class="toc-text">Ⅰ型$(h[k]&#x3D;h[M-k]),M为偶数$：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%85%A1%E5%9E%8B-h-k-x3D-h-M-k-M%E4%B8%BA%E5%A5%87%E6%95%B0"><span class="toc-number">10.3.2.</span> <span class="toc-text">Ⅱ型$(h[k]&#x3D;h[M-k]),M为奇数$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%85%A2%E5%9E%8B-h-k-x3D-h-M-k-M%E4%B8%BA%E5%81%B6%E6%95%B0-%EF%BC%9A"><span class="toc-number">10.3.3.</span> <span class="toc-text">Ⅲ型$(h[k]&#x3D;-h[M-k]),M为偶数$：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%85%A3%E5%9E%8B-h-k-x3D-h-M-k-M%E4%B8%BA%E5%A5%87%E6%95%B0-%EF%BC%9A"><span class="toc-number">10.3.4.</span> <span class="toc-text">Ⅳ型$(h[k]&#x3D;-h[M-k]),M为奇数$：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%9B%B8%E4%BD%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9B%B6%E7%82%B9%E5%88%86%E5%B8%83"><span class="toc-number">10.4.</span> <span class="toc-text">线性相位系统的零点分布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AA%97%E5%87%BD%E6%95%B0%E6%B3%95"><span class="toc-number">10.5.</span> <span class="toc-text">窗函数法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AA%97%E5%87%BD%E6%95%B0%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-number">10.5.1.</span> <span class="toc-text">窗函数的选择</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%91%E7%8E%87%E5%8F%96%E6%A0%B7%E6%B3%95"><span class="toc-number">10.6.</span> <span class="toc-text">频率取样法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-6-%E4%B9%A0%E9%A2%98"><span class="toc-number">11.</span> <span class="toc-text">chapter 6 习题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-7-%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">12.</span> <span class="toc-text">chapter 7 数字滤波器的结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IIR%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E5%9E%8B%E7%BB%93%E6%9E%84"><span class="toc-number">12.1.</span> <span class="toc-text">IIR数字滤波器的直接型结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IIR%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E7%BA%A7%E8%81%94%E5%9E%8B%E7%BB%93%E6%9E%84"><span class="toc-number">12.2.</span> <span class="toc-text">IIR数字滤波器的级联型结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IIR%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E5%B9%B6%E8%81%94%E5%9E%8B%E7%BB%93%E6%9E%84"><span class="toc-number">12.3.</span> <span class="toc-text">IIR数字滤波器的并联型结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FIR%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E5%9E%8B%E7%BB%93%E6%9E%84"><span class="toc-number">12.4.</span> <span class="toc-text">FIR数字滤波器的直接型结构</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/10/28/%E8%AF%97/" title="一些小诗"><img src="https://s1.ax1x.com/2023/05/23/p9TeMtO.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一些小诗"/></a><div class="content"><a class="title" href="/2023/10/28/%E8%AF%97/" title="一些小诗">一些小诗</a><time datetime="2023-10-28T06:07:32.285Z" title="发表于 2023-10-28 14:07:32">2023-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/28/%E4%BF%A1%E6%81%AF%E5%AF%BC%E8%AE%BA/" title="Information Theory and Coding"><img src="https://s1.ax1x.com/2023/05/23/p9TireU.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Information Theory and Coding"/></a><div class="content"><a class="title" href="/2023/10/28/%E4%BF%A1%E6%81%AF%E5%AF%BC%E8%AE%BA/" title="Information Theory and Coding">Information Theory and Coding</a><time datetime="2023-10-28T06:07:32.282Z" title="发表于 2023-10-28 14:07:32">2023-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/28/HUAWEI%20ICT/" title="Information and Communications Technology of HUAWEI"><img src="https://s1.ax1x.com/2023/05/23/p9TZBO1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Information and Communications Technology of HUAWEI"/></a><div class="content"><a class="title" href="/2023/10/28/HUAWEI%20ICT/" title="Information and Communications Technology of HUAWEI">Information and Communications Technology of HUAWEI</a><time datetime="2023-10-28T06:07:32.278Z" title="发表于 2023-10-28 14:07:32">2023-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/28/IEICE%E6%9C%9F%E5%88%8A%E6%A8%A1%E6%9D%BF%E8%AF%B4%E6%98%8E%E7%BF%BB%E8%AF%91%EF%BC%88LaTeX%EF%BC%89/" title="IEICE期刊的LaTeX模板使用说明"><img src="https://s1.ax1x.com/2023/05/23/p9TZ2fe.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IEICE期刊的LaTeX模板使用说明"/></a><div class="content"><a class="title" href="/2023/10/28/IEICE%E6%9C%9F%E5%88%8A%E6%A8%A1%E6%9D%BF%E8%AF%B4%E6%98%8E%E7%BF%BB%E8%AF%91%EF%BC%88LaTeX%EF%BC%89/" title="IEICE期刊的LaTeX模板使用说明">IEICE期刊的LaTeX模板使用说明</a><time datetime="2023-10-28T06:07:32.276Z" title="发表于 2023-10-28 14:07:32">2023-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/28/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E5%9C%A8word%E4%B8%AD%E5%86%99latex%E7%9A%84logo/" title="如何“优雅”地在word当中写出LaTeX的logo"><img src="https://s1.ax1x.com/2023/05/23/p9TeD3Q.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何“优雅”地在word当中写出LaTeX的logo"/></a><div class="content"><a class="title" href="/2023/10/28/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E5%9C%A8word%E4%B8%AD%E5%86%99latex%E7%9A%84logo/" title="如何“优雅”地在word当中写出LaTeX的logo">如何“优雅”地在word当中写出LaTeX的logo</a><time datetime="2023-10-28T06:07:32.274Z" title="发表于 2023-10-28 14:07:32">2023-10-28</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://s1.ax1x.com/2023/06/03/pC9QLw9.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By TrainKing</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><br>
+<a href="http://www.beian.miit.gov.cn/"  style="color:#f72b07" target="_blank">陇ICP备2023002704号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><!-- hexo injector body_end end --></body></html>
